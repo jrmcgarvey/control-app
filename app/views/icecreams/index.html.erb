@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Icecreams</h1>
+<h1>Ice Cream Orders</h1>
 
 <table>
   <thead>
@@ -22,9 +22,9 @@
         <td><%= icecream.flavor %></td>
         <td><%= icecream.size %></td>
         <td><%= icecream.new_account %></td>
-        <td><%= link_to 'Show', icecream %></td>
-        <td><%= link_to 'Edit', edit_icecream_path(icecream) %></td>
-        <td><%= link_to 'Destroy', icecream, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', icecream, class: "button" %></td>
+        <td><%= link_to 'Edit', edit_icecream_path(icecream), class: "button" %></td>
+        <td><%= link_to 'Delete', icecream, method: :delete, data: { confirm: 'Are you sure?' }, class: "button" %></td>
       </tr>
     <% end %>
   </tbody>

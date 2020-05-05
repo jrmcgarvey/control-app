@@ -28,7 +28,7 @@ class IcecreamsController < ApplicationController
 
     respond_to do |format|
       if @icecream.save
-        format.html { redirect_to @icecream, notice: 'Icecream was successfully created.' }
+        format.html { redirect_to @icecream, notice: 'The ice cream order was successfully created.' }
         format.json { render :show, status: :created, location: @icecream }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class IcecreamsController < ApplicationController
   def update
     respond_to do |format|
       if @icecream.update(icecream_params)
-        format.html { redirect_to @icecream, notice: 'Icecream was successfully updated.' }
+        format.html { redirect_to @icecream, notice: 'The ice cream order was successfully updated.' }
         format.json { render :show, status: :ok, location: @icecream }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class IcecreamsController < ApplicationController
   def destroy
     @icecream.destroy
     respond_to do |format|
-      format.html { redirect_to icecreams_url, notice: 'Icecream was successfully destroyed.' }
+      format.html { redirect_to icecreams_url, notice: 'The ice cream order was successfully deleted.' }
       format.json { head :no_content }
     end
   end

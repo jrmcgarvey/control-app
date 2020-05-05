@@ -30,16 +30,16 @@
     <%= form.label :size %>
     <% Icecream::SIZES.each do |s| %>
       <%= form.radio_button :size, s %>
-      <%= form.label :size, s, value: s, style: "display: inline-block;" %><br>
+      <%= form.label :size, s, value: s, class: "checkbox-label" %><br>
     <% end %>
   </div>
 
   <div class="field">
-    <%= form.label :new_account %>
     <%= form.check_box :new_account %>
+      <%= form.label :new_account, class: "checkbox-label" %><br>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit value: @submit_text, "data-disable-with" => @submit_text, class: "button" %>
   </div>
 <% end %>
