@@ -5,6 +5,7 @@ class Icecream < ApplicationRecord
   validates :size, presence: true
   validates :count, presence: true
   validates :name, presence: true
+  validates :count, numericality: { greater_than_or_equal_to: 1}
 
   def self.flavors
     two_d = []

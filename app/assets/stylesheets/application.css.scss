@@ -14,57 +14,77 @@
  *= require_self
  */
 @import "bootstrap";
- td, p {
-   font-size: 1.5rem;
-   line-height: 2rem;
- }
- input,
- select {
-   font-size: 1.5rem;
-   line-height: 2rem;
- }
+@font-face {
+   font-family: 'MONBIJOUX';
+   src: url('MONBIJOUX.ttf');
+}
 
- input[type=radio],
- input[type=checkbox] {
-   border: 0px;
-   width: 10%;
-   height: 1rem;
- }
+body {
+  background-image: url('icecream.jpg');
+}
+h1 {
+  font-family: "MONBIJOUX";
+}
+
+.bg-light {
+  background-color: #ffebcd !important;
+}
+.navbar-nav > li > a:hover, .navbar-nav > li > a:focus {
+    background-color: #b8860b;
+    color: #FFC0CB;
+}
+td, p {
+ font-size: 1.5rem;
+ line-height: 2rem;
+}
+input,
+select {
+ font-size: 1.5rem;
+ line-height: 2rem;
+}
+
+input[type=radio],
+input[type=checkbox] {
+ border: 0px;
+ width: 10%;
+ height: 1rem;
+}
 
 header {
-  height: 12rem;
+height: 12rem;
 }
- .icforms {
-   width: 80%;
-   background-color: lightpink;
-   margin: auto;
-   font-size: 1.5rem;
-   line-height: 2rem;
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
-   border: .5rem solid blue;
- }
+.icforms {
+ width: 80%;
+ background-color: lightpink;
+ margin: auto;
+ font-size: 1.5rem;
+ line-height: 2rem;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ border: .5rem solid blue;
+ border-radius: 5rem;
+}
 
- .checkbox-label {
-   display: inline-block;
- }
+.checkbox-label {
+ display: inline-block;
+}
 
- .button {
-   /* background: transparent url('bg_button_a.gif') no-repeat scroll top right; */
-   color: #fff;
-   background-color: blue;
-   display: block;
-   /* float: left; */
-   font: normal 1.3rem arial, sans-serif;
-   height: 1.7rem;
-   margin: 6px;
-   padding: 10px;
-   border-radius: 10px;
-   /* padding: 18px;  sliding doors padding */
-   text-decoration: none;
- }
+.button {
+ /* background: transparent url('bg_button_a.gif') no-repeat scroll top right; */
+ color: #fff;
+ background-color: blue;
+ display: block;
+ /* float: left; */
+ font: normal 1.3rem arial, sans-serif;
+ height: 1.7rem;
+ margin: 6px;
+ padding: 10px;
+ border-radius: 10px;
+ /* padding: 18px;  sliding doors padding */
+ text-decoration: none;
+}
 
 #notice {
   color: blue;
