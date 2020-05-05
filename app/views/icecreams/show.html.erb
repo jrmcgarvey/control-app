@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @icecream.name %>
+</p>
+
+<p>
+  <strong>Count:</strong>
+  <%= @icecream.count %>
+</p>
+
+<p>
+  <strong>Flavor:</strong>
+  <%= @icecream.flavor %>
+</p>
+
+<p>
+  <strong>Size:</strong>
+  <%= @icecream.size %>
+</p>
+
+<p>
+  <strong>New account:</strong>
+  <%= @icecream.new_account %>
+</p>
+
+<%= link_to 'Edit', edit_icecream_path(@icecream) %> |
+<%= link_to 'Back', icecreams_path %>

@@ -1,0 +1,45 @@
+<%= form_with(model: icecream, local: true) do |form| %>
+  <% if icecream.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(icecream.errors.count, "error") %> prohibited this icecream from being saved:</h2>
+
+      <ul>
+      <% icecream.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :count %>
+    <%= form.number_field :count %>
+  </div>
+
+  <div class="field">
+    <%= form.label :flavor %>
+    <%= form.select(:flavor, Icecream.flavors) %>
+  </div>
+
+  <div class="field">
+    <%= form.label :size %>
+    <% Icecream::SIZES.each do |s| %>
+      <%= form.radio_button :size, s %>
+      <%= form.label :size, s, value: s, style: "display: inline-block;" %><br>
+    <% end %>
+  </div>
+
+  <div class="field">
+    <%= form.label :new_account %>
+    <%= form.check_box :new_account %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

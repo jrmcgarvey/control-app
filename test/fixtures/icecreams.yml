@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  count: 1
+  flavor: MyString
+  size: MyString
+  new_account: false
+
+two:
+  name: MyString
+  count: 1
+  flavor: MyString
+  size: MyString
+  new_account: false
