@@ -10,7 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_03_152510) do
+ActiveRecord::Schema.define(version: 2020_11_08_223634) do
+
+  create_table "flavors", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "icecreams", force: :cascade do |t|
     t.string "name"

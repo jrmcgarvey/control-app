@@ -21,9 +21,15 @@
     <%= form.number_field :count %>
   </div>
 
+  <!--
+    <div class="field">
+    <% #form.label :flavor %>
+    <% #form.select(:flavor, Icecream.flavors) %>
+  </div>
+  -->
   <div class="field">
     <%= form.label :flavor %>
-    <%= form.select(:flavor, Icecream.flavors) %>
+    <%= form.collection_select :flavor, Flavor.all, :name, :name, {selected: icecream.flavor} %>
   </div>
 
   <div class="field">
